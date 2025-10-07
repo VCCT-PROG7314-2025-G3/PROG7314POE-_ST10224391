@@ -2,26 +2,25 @@
 
 ## Overview
 
-SwopTrader is a comprehensive mobile trading platform built with Android Jetpack Compose that enables users to trade items sustainably while reducing carbon footprint. The app connects to a custom REST API with MongoDB Atlas database, providing real-time synchronization and offline capabilities.
+SwopTrader is an android app where users can trade items woth each other without the need for monetary exchange. The purpose is for the users to break the current broken global exchange methodology and restore unity and an inter-connectedness among users that allows both parties to be happy and to reduce carbon emissions and carbon waste. The app provides real-time sync with offline capabilities.
 
 ## 🚀 Key Features
 
 ### Core Trading Features
-- **Item Listing & Management**: Create, edit, and manage item listings with photos, descriptions, and categories
-- **Smart Matching**: AI-powered item matching based on user preferences and trade history
-- **Offer System**: Send, receive, accept, and reject trade offers with cash differences
+- **Item Listing & Management**: Create, edit, and manage listings with media, descriptions, and categories
+- **Offer System**: Users can send, receive, accept, and reject trade offers with cash differences
 - **Meetup Scheduling**: Integrated location-based meetup scheduling with Google Maps
-- **Trade History**: Complete transaction tracking with carbon savings and trade scores
-- **User Profiles**: Comprehensive user profiles with trade scores, verification, and statistics
+- **Trade History**: Full transaction tracking which includes carbon savings as well as any trade scores
+- **User Profiles**: Complete user profiles which include their username, trade scores, verification status, and statistics
 
 ### Advanced Features
-- **Real-time Chat**: In-app messaging system with offer integration
-- **Push Notifications**: Real-time notifications for offers, messages, and trade updates
-- **Offline Mode**: Full offline functionality with automatic synchronization
-- **Multi-language Support**: Support for English, Afrikaans, and Zulu
+- **Real-time Chat**: The app offers an in-app messaging service.
+- **Push Notifications**: Users get notifications for offers, messages, and trade updates in real time
+- **Offline Mode**: The app is fully functional offline with automatic synchronization across local db and online.
+- **Multi-language Support**: Support for English, Afrikaans, and Zulu and many other South African languages including Ndebele.
 - **Biometric Authentication**: Fingerprint and facial recognition security
-- **Location Services**: GPS-based location tracking and distance calculations
-- **Image Management**: Multiple photo uploads with cloud storage
+- **Location Services**: Geolocation tracking with distance calculations for accuracy
+- **Image Management**: Multiple photo uploads with storage on the cloud
 - **Search & Filtering**: Advanced search with category and location filters
 
 ## 🏗️ Architecture
@@ -84,8 +83,8 @@ SwopTrader is a comprehensive mobile trading platform built with Android Jetpack
 
 ### ✅ Multi-language Support
 - **South African Languages**: English, Afrikaans, and Zulu support
-- **Dynamic Translation**: Real-time language switching without app restart
-- **Cultural Adaptation**: Region-specific formatting and cultural considerations
+- **Dynamic Translation**: Real-time language switching without the app having to restart
+- **Cultural Adaptation**: Formatting and cultural considerations based on region
 - **Accessibility**: Full accessibility support for all languages
 
 ## 🛠️ Technical Implementation
@@ -233,10 +232,5 @@ The app implements a **gradual migration approach**:
 - **Local Trading**: Encourage local meetups to reduce transportation
 - **Sustainability Scoring**: Gamify environmental consciousness
 
-## 📞 Support & Contact
-
-For technical support or feature requests, please contact the development team.
-
----
 
 **SwopTrader** - Making sustainable trading accessible, secure, and user-friendly.

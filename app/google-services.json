@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "485701460355",
+    "project_id": "curious-striker-473600-g2",
+    "storage_bucket": "curious-striker-473600-g2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:485701460355:android:56af18a84f1b72824756b6",
+        "android_client_info": {
+          "package_name": "com.example.swoptrader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "485701460355-na2sdkgvuvlflq7o0j98o4j2o5kea5bk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.swoptrader",
+            "certificate_hash": "41633afbe71b8234f810711bce487e02a7755992"
+          }
+        },
+        {
+          "client_id": "485701460355-mk6skq9np7rkn4128rin47jdo15eccu6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAgaMvB-UptPxQJe1RjtuBmWZixvR3BDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "485701460355-mk6skq9np7rkn4128rin47jdo15eccu6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

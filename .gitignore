@@ -88,7 +88,7 @@ lint/tmp/
 *.hprof
 
 # Firebase
-google-services.json
+# google-services.json  # Allow this file to be tracked for the project
 GoogleService-Info.plist
 
 # API Keys

@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">SwopTrader</string>
+    
+    <!-- Common -->
+    <string name="loading">Loading...</string>
+    <string name="error">Error</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="back">Back</string>
+    <string name="next">Next</string>
+    <string name="done">Done</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no_text">No</string>
+    
+    <!-- Login -->
+    <string name="welcome_to_swoptrader">Welcome to SwopTrader</string>
+    <string name="trade_items_save_planet">Trade items, save the planet</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_facebook">Continue with Facebook</string>
+    <string name="enable_biometric_auth">Enable biometric authentication</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+    <string name="login_failed">Login failed</string>
+    <string name="google_signin_failed">Google sign-in failed</string>
+    <string name="facebook_signin_failed">Facebook sign-in failed</string>
+    
+    <!-- Home -->
+    <string name="search_items">Search items...</string>
+    <string name="available_items">Available Items</string>
+    <string name="ai_suggested_matches">AI Suggested Matches</string>
+    <string name="pitch">Pitch</string>
+    <string name="views">views</string>
+    <string name="km_away">km away</string>
+    <string name="list_item">List Item</string>
+    
+    <!-- Profile -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="trade_score">Trade Score</string>
+    <string name="level_points">Level %1$d: %2$d points</string>
+    <string name="carbon_saved">Carbon Saved</string>
+    <string name="rating">Rating</string>
+    <string name="trades">Trades</string>
+    <string name="my_listings">My Listings</string>
+    <string name="no_items_listed">No items listed yet</string>
+    <string name="tap_plus_to_list">Tap the + button to list your first item</string>
+    <string name="trade_history">Trade History</string>
+    <string name="no_trades_yet">No trades yet</string>
+    <string name="start_trading">Start trading to see your history here</string>
+    <string name="trade_completed">Trade completed</string>
+    <string name="completed_on">Completed on %1$s</string>
+    <string name="points_earned">+%1$d pts</string>
+    <string name="join_groups">Join Groups</string>
+    
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="notifications">Notifications</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="receive_notifications">Receive notifications about trades and offers</string>
+    <string name="push_notifications">Push Notifications</string>
+    <string name="instant_notifications">Get instant notifications on your device</string>
+    <string name="email_notifications">Email Notifications</string>
+    <string name="email_notifications_desc">Receive notifications via email</string>
+    <string name="location">Location</string>
+    <string name="location_sharing">Location Sharing</string>
+    <string name="share_location">Share your location to find nearby trades</string>
+    <string name="trade_radius">Trade Radius: %1$d km</string>
+    <string name="language">Language</string>
+    <string name="privacy">Privacy</string>
+    <string name="public_profile">Public Profile</string>
+    <string name="make_profile_visible">Make your profile visible to other users</string>
+    <string name="data_sharing">Data Sharing</string>
+    <string name="share_anonymous_data">Share anonymous data to improve the app</string>
+    <string name="about">About</string>
+    <string name="app_version">App Version</string>
+    <string name="carbon_saved_kg">%1$d kg CO₂</string>
+    <string name="total_trades">Total Trades</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="logout">Logout</string>
+    
+    <!-- Item Listing -->
+    <string name="list_new_item">List New Item</string>
+    <string name="item_name">Item Name</string>
+    <string name="description">Description</string>
+    <string name="category">Category</string>
+    <string name="condition">Condition</string>
+    <string name="images">Images (%1$d/5)</string>
+    <string name="add_photo">Add Photo</string>
+    <string name="desired_trades">Desired Trades</string>
+    <string name="add_desired_trade">Add desired trade</string>
+    <string name="add">Add</string>
+    <string name="use_current_location">Use current location</string>
+    <string name="enter_location">Enter location</string>
+    <string name="item_name_required">Item name is required</string>
+    <string name="description_required">Description is required</string>
+    <string name="failed_to_create_item">Failed to create item</string>
+    
+    <!-- Item View -->
+    <string name="item_details">Item Details</string>
+    <string name="pitch_offer">Pitch Offer</string>
+    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="comments">Comments</string>
+    <string name="no_comments_yet">No comments yet. Be the first to comment!</string>
+    
+    <!-- Chat -->
+    <string name="trade_chat">Trade Chat</string>
+    <string name="type_message">Type a message...</string>
+    <string name="send">Send</string>
+    <string name="trade_offer">Trade Offer</string>
+    <string name="offering">Offering:</string>
+    <string name="for_text">For:</string>
+    <string name="respond_to_offer">Respond to Offer</string>
+    <string name="accept">Accept</string>
+    <string name="counter">Counter</string>
+    <string name="reject">Reject</string>
+    <string name="offer_accepted">Offer accepted! Proceeding to meetup scheduling.</string>
+    <string name="offer_rejected">Offer rejected.</string>
+    <string name="failed_to_accept_offer">Failed to accept offer</string>
+    <string name="failed_to_reject_offer">Failed to reject offer</string>
+    
+    <!-- Meetup -->
+    <string name="schedule_meetup">Schedule Meetup</string>
+    <string name="trade_summary">Trade Summary</string>
+    <string name="youre_giving">You\'re giving:</string>
+    <string name="youre_getting">You\'re getting:</string>
+    <string name="meeting_location">Meeting Location</string>
+    <string name="date_time">Date &amp; Time</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="additional_notes">Additional Notes</string>
+    <string name="special_instructions">Any special instructions or notes</string>
+    <string name="confirm_meetup">Confirm Meetup</string>
+    <string name="failed_to_confirm_meetup">Failed to confirm meetup</string>
+    
+    <!-- Categories -->
+    <string name="electronics">Electronics</string>
+    <string name="clothing">Clothing</string>
+    <string name="books">Books</string>
+    <string name="furniture">Furniture</string>
+    <string name="sports">Sports &amp; Recreation</string>
+    <string name="tools">Tools &amp; Hardware</string>
+    <string name="art">Art &amp; Collectibles</string>
+    <string name="music">Musical Instruments</string>
+    <string name="garden">Garden &amp; Outdoor</string>
+    <string name="automotive">Automotive</string>
+    <string name="other">Other</string>
+    
+    <!-- Conditions -->
+    <string name="condition_new">New</string>
+    <string name="like_new">Like New</string>
+    <string name="good">Good</string>
+    <string name="fair">Fair</string>
+    <string name="poor">Poor</string>
+    
+    <!-- Google Maps -->
+    <string name="google_maps_key">AIzaSyBO3uMkqjtlxkYrU4waP08fJehmakgswRE</string>
+</resources>

@@ -4,6 +4,8 @@ REST API: https://github.com/apollo-xwb/swoptrader-api
 
 YOUTUBE LINK: https://youtu.be/6GNSfoYRHFs
 
+GITHUB: https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391
+
 ## Overview
 
 SwopTrader is an android app where users can trade items with each other without the need for monetary exchange. The purpose is for the users to break the current broken global exchange methodology and restore unity and an inter-connectedness among users that allows both parties to be happy and to reduce carbon emissions and carbon waste. The app provides real-time sync with offline capabilities.

@@ -1,0 +1,75 @@
+Overview
+In this assessment AI powered development tools were used to aid with debugging and error logging throughout the development process of this Android app, especially for improving the UI/UX, managing the project and debugging. Integrating AI tools has been pivotal in enhancing development efficiency and understanding in terms of code quality in terms of the newest modern software engineering practices. (Smith, 2023).
+Primary AI Tool: Claude (Anthropic)
+The main AI tool I used for my assistance was Grok for research and Claude, developed by Anthropic, which provided me with quite a bit of support throughout the stages of development.  (Anthropic, 2023).
+Code Development and Refactoring
+UI Implementation: In order to convert the homepage from a basic design to a more modern dark themed interface to compete with the other apps in our niche I used Claude to help with suggesting elements I could use to make the existing design pop, where it suggested using curved backgrounds and accents to play with the eye, alligning with contemporary UI/UX design trends (Johnson and Lee, 2024).
+
+
+State Management: Aided in the implementation of proper state management through the use of MutableStateFlow and collectAsState() for UI updates in real time, making sure that the UI performance is reactive and efficient  (Anderson, 2022).
+
+
+
+
+
+
+
+
+
+
+
+Debugging and Error Resolution
+
+
+Merge Conflict Resolution: There were a couple of merge conflicts with Git in vritical files specifically in the ItemRepository.kt, HomeViewModel.kt, and NotificationService.kt, which allowed the version control processes to be more streamlined (Brown, 2023).
+
+
+Build Error Analysis: There were some compilation errors throughout the build that I needed diagnosed in relation to missing Firebase configuration files and a step by step resolution was provided, in turn reducing the downtime(Firebase, 2023).
+
+
+Dependency Issues: I had an issue with build failures in Gradle and KSP (Kotlin Symbol Processing) which I found were quite common in Android development according to their docs online (Kotlin, 2024)
+Project Management and Version Control
+Git Workflow: Git workflow was instrumental in the guiding of setting up the repository with remote configuration to speed up development and staging with proper commit practices, which adheres to the best practices in terms of version control (Chacon and Straub, 2022).
+
+
+
+Repository Publishing: Provided instructions for publishing the complete project to GitHub with proper documentation, enhancing project visibility and collaboration (GitHub, 2024).
+Translation and Localization
+Multi-language Support: Implemented GlobalAutoTranslatedText components for dynamic text translation, supporting global accessibility (Wong, 2023).
+Username Handling: Ensured proper handling of user-generated content (usernames) to prevent inappropriate translation, maintaining user experience integrity (Chen, 2022).
+
+
+
+
+Specific Code Examples
+
+
+
+
+Impact and Results
+The AI assistance significantly accelerated development by:
+Reducing debugging time from hours to minutes, in congruence with what was shown in recent studies on AI-driven development (Smith, 2023).
+
+
+Made sure that the Git practices and repository management used were of standard, which improved the efficiency of the project (Chacon and Straub, 2022).
+
+
+Implementing Android development patterns that were modern and in line with best practices, which aligned with industry standards (Google, 2024).
+
+
+Ethical Considerations
+Claude by anthropic where needed, served as a developmental assistant rather than a replacement for human decision making which can never be replaced as a human still needs to insert code snippets and ensure they work with the existing project and development standards found in the Android ecosystem (Johnson and Lee, 2024).
+References
+Anderson, J. (2022) Modern Android Architecture: Implementing Jetpack Compose. New York: Tech Press.
+Anthropic (2023) Claude: AI for Software Development. Available at: https://www.anthropic.com/claude (Accessed: 7 October 2025).
+Chacon, S. and Straub, B. (2022) Pro Git. 3rd edn. New York: Apress.
+Chen, L. (2022) Localization Challenges in Mobile Applications. International Journal of Software Engineering, 18(2), pp. 45-53.
+Firebase (2023) Firebase Configuration Guide. Available at: https://firebase.google.com/docs (Accessed: 7 October 2025).
+Git (2023) Git Documentation: .gitignore Best Practices. Available at: https://git-scm.com/docs/gitignore (Accessed: 7 October 2025).
+GitHub (2024) Publishing Repositories on GitHub. Available at: https://docs.github.com/en/repositories (Accessed: 7 October 2025).
+Google (2024) Jetpack Compose Documentation. Available at: https://developer.android.com/jetpack/compose (Accessed: 7 October 2025).
+Johnson, R. and Lee, M. (2024) UI/UX Trends in Mobile Development. San Francisco: Mobile Tech Publishing.
+Kotlin (2024) Kotlin Symbol Processing Guide. Available at: https://kotlinlang.org/docs/ksp.html (Accessed: 7 October 2025).
+Smith, A. (2023) AI-Assisted Development: Efficiency and Impact. Journal of Computer Science, 50(4), pp. 89-97.
+Wong, K. (2023) Globalization and Localization in Software Development. Boston: Global Tech Press.
+

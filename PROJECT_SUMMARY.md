@@ -277,9 +277,3 @@ SwopTrader successfully demonstrates:
 - **User Experience**: Intuitive, accessible, and feature-rich application
 - **Innovation**: Unique sustainability features and environmental focus
 
-The project showcases advanced mobile development skills, backend API development, database design, cloud deployment, and comprehensive software engineering practices, making it a complete and professional mobile application ready for production use.
-
----
-
-**SwopTrader** - A comprehensive demonstration of modern mobile development, backend API creation, and sustainable technology solutions.
-

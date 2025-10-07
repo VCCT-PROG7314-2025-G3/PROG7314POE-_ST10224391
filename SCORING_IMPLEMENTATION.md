@@ -1,11 +1,5 @@
 # SwopTrader - Scoring System Implementation
 
-## 🎯 Overview
-
-This document outlines the comprehensive scoring system implementation for SwopTrader, including carbon footprint tracking, trade scoring, user leveling, and database optimization.
-
-## ✅ Implemented Features
-
 ### 1. Enhanced Carbon Footprint Calculation
 
 #### Algorithm

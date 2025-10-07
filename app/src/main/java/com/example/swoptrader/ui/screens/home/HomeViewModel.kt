@@ -76,10 +76,7 @@ class HomeViewModel @Inject constructor(
     
     fun updateSearchQuery(query: String) {
         _uiState.value = _uiState.value.copy(searchQuery = query)
-<<<<<<< HEAD
         applyFilters()
-=======
->>>>>>> 3fb9eb7c543f3e71b1d46847563ffe84a3ac480d
     }
     
     fun searchItems() {
@@ -155,7 +152,6 @@ class HomeViewModel @Inject constructor(
                     onSuccess = { allItems ->
                         var filteredItems = allItems
                         
-<<<<<<< HEAD
                         // Apply search filter
                         if (_uiState.value.searchQuery.isNotEmpty()) {
                             filteredItems = filteredItems.filter { item ->
@@ -165,8 +161,6 @@ class HomeViewModel @Inject constructor(
                             }
                         }
                         
-=======
->>>>>>> 3fb9eb7c543f3e71b1d46847563ffe84a3ac480d
                         // Apply category filter
                         if (_uiState.value.selectedCategory != null) {
                             filteredItems = filteredItems.filter { 

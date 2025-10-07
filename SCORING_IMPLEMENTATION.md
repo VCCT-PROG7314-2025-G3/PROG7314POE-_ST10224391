@@ -293,3 +293,7 @@ fun completeTrade() {
 ---
 
 This comprehensive scoring system implementation provides a robust foundation for user engagement, environmental tracking, and platform performance optimization in the SwopTrader application.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3fb9eb7c543f3e71b1d46847563ffe84a3ac480d

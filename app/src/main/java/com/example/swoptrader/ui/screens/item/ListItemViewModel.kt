@@ -183,6 +183,7 @@ class ListItemViewModel @Inject constructor(
                 } else null
                 
                 val userLocation = geocodingService.getCurrentLocationWithGeocoding()
+<<<<<<< HEAD
                 // For items created by the user, distance should be 0
                 val distance = if (itemLocation != null && userLocation != null) {
                     // Check if the item location is the same as user location (within a small tolerance)
@@ -194,6 +195,9 @@ class ListItemViewModel @Inject constructor(
                         DistanceCalculator.calculateDistanceBetweenLocations(userLocation, itemLocation)
                     }
                 } else null
+=======
+                val distance = DistanceCalculator.calculateDistanceBetweenLocations(userLocation, itemLocation)
+>>>>>>> 3fb9eb7c543f3e71b1d46847563ffe84a3ac480d
                 
                 val uploadedImageUrls = mutableListOf<String>()
                 for (imageUri in state.selectedImages) {

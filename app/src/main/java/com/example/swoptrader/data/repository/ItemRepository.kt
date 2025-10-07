@@ -154,11 +154,24 @@ class ItemRepositoryImpl @Inject constructor(
     
     override suspend fun createItem(item: Item): Result<Item> {
         return try {
+<<<<<<< HEAD
             // Use the item's own location for distance calculation (should be 0 for user's own items)
             val distance = if (item.location != null) {
                 // For items created by the user, distance should be 0
                 // The distance is already calculated in ListItemViewModel using the user's actual location
                 item.distance
+=======
+            val currentUserLocation = Location(
+                latitude = -26.2041, // Johannesburg coordinates
+                longitude = 28.0473
+            )
+            
+            val distance = if (item.location != null) {
+                calculateDistance(
+                    currentUserLocation.latitude, currentUserLocation.longitude,
+                    item.location.latitude, item.location.longitude
+                )
+>>>>>>> 3fb9eb7c543f3e71b1d46847563ffe84a3ac480d
             } else null
             
             val itemWithDistance = item.copy(distance = distance)

@@ -404,3 +404,7 @@ The mobile app implements a gradual migration approach:
 ---
 
 This API documentation provides comprehensive information about the SwopTrader REST API, its capabilities, and integration with the mobile application. The API is designed for scalability, security, and performance to support the growing needs of the SwopTrader platform.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3fb9eb7c543f3e71b1d46847563ffe84a3ac480d

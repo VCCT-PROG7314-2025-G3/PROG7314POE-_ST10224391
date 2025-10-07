@@ -115,7 +115,11 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
     implementation("com.google.android.libraries.places:places:3.3.0")
     
+<<<<<<< HEAD
     // Translation - using mock implementation for now
+=======
+   
+>>>>>>> 3fb9eb7c543f3e71b1d46847563ffe84a3ac480d
     // implementation("com.google.cloud:google-cloud-translate:2.3.0")
     // implementation("com.google.auth:google-auth-library-oauth2-http:1.19.0")
     // implementation("com.google.api-client:google-api-client:2.0.0")

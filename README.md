@@ -2,7 +2,7 @@
 
 SOLO GROUP: ST10224391
 
-REST API: https://github.com/apollo-xwb/swoptrader-api
+REST API: https://github.com/apollo-xwb/swoptrader-api (ENV EXAMPLES FOUND HERE)
 
 PART 3 YOUTUBE LINK: https://youtu.be/ZKKV8uFmc-s
 
@@ -11,6 +11,13 @@ PART 2 YOUTUBE LINK: https://youtu.be/6GNSfoYRHFs
 GITHUB: https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391
 
 SCREENSHOTS: https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391/blob/master/SCREENSHOTS.pdf
+
+## Changelog
+
+- pivotted from runway to render for hosting API
+- added push notifications
+- added group member to README
+- updated documentation to include render changes and api documentation
 
 ## Overview
 

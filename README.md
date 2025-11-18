@@ -2,7 +2,9 @@
 
 SOLO GROUP: ST10224391
 
-REST API: https://github.com/apollo-xwb/swoptrader-api (ENV EXAMPLES FOUND HERE)
+REST API: 
+- https://github.com/apollo-xwb/swoptrader-api (ENV EXAMPLES FOUND HERE)
+- https://swoptrader-api.onrender.com/health
 
 PART 3 YOUTUBE LINK: https://youtu.be/ZKKV8uFmc-s
 

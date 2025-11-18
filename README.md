@@ -1,5 +1,7 @@
 # SwopTrader - Sustainable Trading Platform
 
+SOLO GROUP: ST10224391
+
 REST API: https://github.com/apollo-xwb/swoptrader-api
 
 YOUTUBE LINK: https://youtu.be/6GNSfoYRHFs
@@ -47,8 +49,16 @@ SwopTrader is an android app where users can trade items with each other without
 - **Database**: MongoDB Atlas (cloud-hosted)
 - **Authentication**: JWT-based authentication
 - **Security**: CORS, Helmet, Rate limiting
-- **Deployment**: Railway cloud platform
+- **Deployment**: Render cloud platform
 - **API Documentation**: RESTful endpoints with comprehensive error handling
+
+#### Push Notification Integration
+- **Firebase Cloud Messaging**: The API uses `firebase-admin` to dispatch push notifications.
+- **Environment Variable**: Set `FIREBASE_SERVICE_ACCOUNT` (Base64-encoded JSON) or `FIREBASE_SERVICE_ACCOUNT_JSON` (raw JSON) with a Firebase service account that has Messaging permissions.
+- **Device Registration Endpoint**: `POST /api/v1/notifications/token` registers an FCM token for a user (body: `{ userId, token, deviceId? }`).
+- **Offer Notification Endpoint**: `POST /api/v1/notifications/offers` triggers a push notification (body: `{ offerId, recipientUserId, senderUserId, senderName, itemName?, message? }`).
+- **Offline Support**: Notifications are delivered even when the app is closed or device is offline (queued and delivered when connectivity is restored).
+- **Multi-device Support**: Users can register multiple devices and receive notifications on all registered devices.
 
 ## 📱 Requirements Implementation
 
@@ -144,10 +154,11 @@ The app implements a **gradual migration approach**:
 - **Performance**: Optimized for various Android versions and screen sizes
 
 ### REST API
-- **Platform**: Railway cloud deployment
-- **URL**: `https://swoptrader-api-production.up.railway.app`
+- **Platform**: Render cloud deployment
+- **URL**: `https://swoptrader-api.onrender.com`
 - **Monitoring**: Health checks and performance monitoring
 - **Scaling**: Auto-scaling based on demand
+- **Push Notifications**: Firebase Cloud Messaging integration
 
 ## 📱 App Features List
 
@@ -214,8 +225,9 @@ The app implements a **gradual migration approach**:
 2. Set up Firebase project and add `google-services.json`
 3. Configure Google Maps API key in `strings.xml`
 4. Set up MongoDB Atlas connection
-5. Deploy REST API to Railway
-6. Build and run the Android app
+5. Deploy REST API to Render (or Railway)
+6. Configure Firebase service account for push notifications
+7. Build and run the Android app
 
 ## 📈 Performance & Scalability
 

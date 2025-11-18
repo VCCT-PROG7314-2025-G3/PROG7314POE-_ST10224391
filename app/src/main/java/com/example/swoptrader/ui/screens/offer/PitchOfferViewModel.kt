@@ -8,6 +8,7 @@ import com.example.swoptrader.data.model.OfferStatus
 import com.example.swoptrader.data.repository.AuthRepository
 import com.example.swoptrader.data.repository.ItemRepository
 import com.example.swoptrader.data.repository.OfferRepository
+import com.example.swoptrader.service.NotificationService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -19,7 +20,8 @@ import javax.inject.Inject
 class PitchOfferViewModel @Inject constructor(
     private val itemRepository: ItemRepository,
     private val authRepository: AuthRepository,
-    private val offerRepository: OfferRepository
+    private val offerRepository: OfferRepository,
+    private val notificationService: NotificationService
 ) : ViewModel() {
     
     private val _uiState = MutableStateFlow(PitchOfferUiState())
@@ -148,6 +150,13 @@ class PitchOfferViewModel @Inject constructor(
                 val result = offerRepository.createOffer(offer)
                 result.fold(
                     onSuccess = {
+                        viewModelScope.launch {
+                            notificationService.sendOfferNotification(
+                                offer = offer,
+                                senderName = currentUser.name,
+                                itemName = targetItem.name
+                            )
+                        }
                         _uiState.value = _uiState.value.copy(
                             isSendingOffer = false,
                             errorMessage = "",

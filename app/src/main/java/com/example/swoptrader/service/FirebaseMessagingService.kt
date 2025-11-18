@@ -6,6 +6,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import com.example.swoptrader.MainActivity
 import com.example.swoptrader.R
@@ -14,8 +15,18 @@ import com.google.firebase.messaging.RemoteMessage
 
 class SwopTraderFirebaseMessagingService : FirebaseMessagingService() {
     
+    companion object {
+        private const val TAG = "FirebaseMsgService"
+    }
+    
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
+        
+        Log.d(TAG, "onMessageReceived called - app is in foreground")
+        Log.d(TAG, "From: ${remoteMessage.from}")
+        Log.d(TAG, "Message ID: ${remoteMessage.messageId}")
+        Log.d(TAG, "Data: ${remoteMessage.data}")
+        Log.d(TAG, "Notification: ${remoteMessage.notification?.title} - ${remoteMessage.notification?.body}")
         
         // Handle data payload
         val data = remoteMessage.data
@@ -33,9 +44,22 @@ class SwopTraderFirebaseMessagingService : FirebaseMessagingService() {
                 )
             }
             "offer" -> {
+                val offerTitle = data["senderName"]?.let { sender ->
+                    val item = data["itemName"]?.takeIf { it.isNotBlank() }
+                    if (item != null) {
+                        "$sender sent you an offer for $item"
+                    } else {
+                        "$sender sent you an offer"
+                    }
+                } ?: "New Offer Received"
+                val offerBody = messageContent.takeIf { it.isNotBlank() } 
+                    ?: data["itemName"]?.let { "New pitch on $it" }
+                    ?: "You have a new trade offer"
+                
                 sendOfferNotification(
-                    title = "New Offer Received",
-                    body = messageContent
+                    title = offerTitle,
+                    body = offerBody,
+                    offerId = data["offerId"]
                 )
             }
             "trade_update" -> {
@@ -57,8 +81,14 @@ class SwopTraderFirebaseMessagingService : FirebaseMessagingService() {
     
     override fun onNewToken(token: String) {
         super.onNewToken(token)
+        Log.d(TAG, "New FCM token received: ${token.take(20)}...")
         // Send token to server
         sendTokenToServer(token)
+    }
+    
+    override fun onDeletedMessages() {
+        super.onDeletedMessages()
+        Log.d(TAG, "onDeletedMessages called - messages were deleted on the server")
     }
     
     private fun sendNotification(title: String, body: String) {
@@ -136,10 +166,11 @@ class SwopTraderFirebaseMessagingService : FirebaseMessagingService() {
         notificationManager.notify(1, notificationBuilder.build())
     }
     
-    private fun sendOfferNotification(title: String, body: String) {
+    private fun sendOfferNotification(title: String, body: String, offerId: String? = null) {
         val intent = Intent(this, MainActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             putExtra("navigate_to", "offers")
+            offerId?.let { putExtra("offer_id", it) }
         }
         
         val pendingIntent = PendingIntent.getActivity(
@@ -215,6 +246,9 @@ class SwopTraderFirebaseMessagingService : FirebaseMessagingService() {
     }
     
     private fun sendTokenToServer(token: String) {
-        // Send token to server through API service
+        // This will be handled by NotificationService.saveFCMTokenToUser()
+        // which is called when the app starts or when user enables notifications
+        // We don't need to do anything here as the token refresh is handled
+        // by the NotificationService lifecycle
     }
 }

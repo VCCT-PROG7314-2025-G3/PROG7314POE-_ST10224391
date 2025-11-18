@@ -11,6 +11,7 @@ import com.example.swoptrader.data.repository.MeetupRepository
 import com.example.swoptrader.data.repository.FirestoreRepository
 import com.example.swoptrader.data.repository.ChatRepository
 import com.example.swoptrader.data.repository.TradeHistoryRepository
+import com.example.swoptrader.service.NotificationService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -27,7 +28,8 @@ class OfferDetailsViewModel @Inject constructor(
     private val meetupRepository: MeetupRepository,
     private val firestoreRepository: FirestoreRepository,
     private val chatRepository: ChatRepository,
-    private val tradeHistoryRepository: TradeHistoryRepository
+    private val tradeHistoryRepository: TradeHistoryRepository,
+    private val notificationService: NotificationService
 ) : ViewModel() {
     
     private val _uiState = MutableStateFlow(OfferDetailsUiState())
@@ -239,6 +241,7 @@ class OfferDetailsViewModel @Inject constructor(
             _uiState.value = _uiState.value.copy(isLoading = true)
             
             try {
+                val currentUser = authRepository.getCurrentUser()
                 val counterOffer = Offer(
                     id = "counter_${System.currentTimeMillis()}",
                     fromUserId = offer.toUserId, // Current user becomes the sender
@@ -254,6 +257,13 @@ class OfferDetailsViewModel @Inject constructor(
                 val result = offerRepository.createOffer(counterOffer)
                 result.fold(
                     onSuccess = {
+                        viewModelScope.launch {
+                            notificationService.sendOfferNotification(
+                                offer = counterOffer,
+                                senderName = currentUser?.name ?: "SwopTrader user",
+                                itemName = offer.requestedItem?.name
+                            )
+                        }
                         _uiState.value = _uiState.value.copy(
                             isLoading = false,
                             successMessage = "Counter offer sent successfully!"

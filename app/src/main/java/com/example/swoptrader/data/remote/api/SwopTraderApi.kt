@@ -88,6 +88,17 @@ interface SwopTraderApi {
     
     @POST("trades/history")
     suspend fun createTradeHistory(@Body tradeHistory: TradeHistory): Response<ApiResponse<TradeHistory>>
+
+    // Notifications
+    @POST("notifications/token")
+    suspend fun registerDeviceToken(
+        @Body request: RegisterDeviceTokenRequest
+    ): Response<ApiResponse<DeviceTokenResponse>>
+
+    @POST("notifications/offers")
+    suspend fun sendOfferNotification(
+        @Body request: OfferNotificationRequest
+    ): Response<ApiResponse<NotificationDispatchResponse>>
 }
 
 

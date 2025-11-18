@@ -6,6 +6,7 @@ import com.example.swoptrader.data.repository.AuthRepository
 import com.example.swoptrader.service.GoogleSignInService
 import com.example.swoptrader.service.SessionManager
 import com.example.swoptrader.service.BiometricAuthService
+import com.example.swoptrader.service.NotificationService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -18,7 +19,8 @@ class LoginViewModel @Inject constructor(
     private val authRepository: AuthRepository,
     private val googleSignInService: GoogleSignInService,
     private val sessionManager: SessionManager,
-    private val biometricAuthService: BiometricAuthService
+    private val biometricAuthService: BiometricAuthService,
+    private val notificationService: NotificationService
 ) : ViewModel() {
     
     private val _uiState = MutableStateFlow(LoginUiState())
@@ -109,6 +111,8 @@ class LoginViewModel @Inject constructor(
                             isLoggedIn = true,
                             isSignUp = false
                         )
+                        // Register FCM token for push notifications
+                        notificationService.saveFCMTokenToUser()
                         // Check for location permission after successful login
                         checkLocationPermissionAfterLogin()
                         },
@@ -202,6 +206,8 @@ class LoginViewModel @Inject constructor(
                             isLoading = false,
                             isLoggedIn = true
                         )
+                        // Register FCM token for push notifications
+                        notificationService.saveFCMTokenToUser()
                         // Check for location permission after successful login
                         checkLocationPermissionAfterLogin()
                     },
@@ -277,6 +283,8 @@ class LoginViewModel @Inject constructor(
                             isLoading = false,
                             isLoggedIn = true
                         )
+                        // Register FCM token for push notifications
+                        notificationService.saveFCMTokenToUser()
                         // Check for location permission after successful signup
                         checkLocationPermissionAfterLogin()
                     },

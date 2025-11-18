@@ -120,4 +120,60 @@ enum class AuthProvider(
     FACEBOOK("facebook")
 }
 
+data class RegisterDeviceTokenRequest(
+    @SerializedName("userId")
+    val userId: String,
+    
+    @SerializedName("token")
+    val token: String,
+    
+    @SerializedName("deviceId")
+    val deviceId: String? = null
+)
+
+data class DeviceTokenResponse(
+    @SerializedName("tokens")
+    val tokens: List<String> = emptyList(),
+    
+    @SerializedName("registeredAt")
+    val registeredAt: String? = null
+)
+
+data class OfferNotificationRequest(
+    @SerializedName("offerId")
+    val offerId: String,
+    
+    @SerializedName("recipientUserId")
+    val recipientUserId: String,
+    
+    @SerializedName("senderUserId")
+    val senderUserId: String,
+    
+    @SerializedName("senderName")
+    val senderName: String,
+    
+    @SerializedName("itemName")
+    val itemName: String? = null,
+    
+    @SerializedName("message")
+    val message: String? = null
+)
+
+data class NotificationDispatchResponse(
+    @SerializedName("successCount")
+    val successCount: Int = 0,
+    
+    @SerializedName("failureCount")
+    val failureCount: Int = 0,
+    
+    @SerializedName("invalidTokens")
+    val invalidTokens: List<String> = emptyList(),
+    
+    @SerializedName("skipped")
+    val skipped: Boolean? = null,
+    
+    @SerializedName("reason")
+    val reason: String? = null
+)
+
 

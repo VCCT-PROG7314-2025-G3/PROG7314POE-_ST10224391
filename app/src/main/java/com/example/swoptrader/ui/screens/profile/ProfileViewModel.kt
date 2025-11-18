@@ -84,6 +84,9 @@ class ProfileViewModel @Inject constructor(
     private fun loadUserOffers(userId: String) {
         viewModelScope.launch {
             try {
+                // Sync with Firestore first to get latest offers
+                offerRepository.syncOffersWithRemote(userId)
+                
                 // Use Flow for real-time updates
                 offerRepository.getOffersByUserFlow(userId).collect { offers ->
                     val sentOffers = offers.filter { it.fromUserId == userId }
@@ -92,12 +95,14 @@ class ProfileViewModel @Inject constructor(
                     _uiState.value = _uiState.value.copy(
                         offers = offers,
                         sentOffers = sentOffers,
-                        receivedOffers = receivedOffers
+                        receivedOffers = receivedOffers,
+                        isLoading = false
                     )
                 }
             } catch (e: Exception) {
                 _uiState.value = _uiState.value.copy(
-                    errorMessage = e.message ?: "Failed to load offers"
+                    errorMessage = e.message ?: "Failed to load offers",
+                    isLoading = false
                 )
             }
         }

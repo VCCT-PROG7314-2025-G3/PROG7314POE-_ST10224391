@@ -6,11 +6,11 @@ The SwopTrader REST API is a comprehensive backend service built with Node.js, E
 
 ## 🚀 API Information
 
-- **Base URL**: `https://swoptrader-api-production.up.railway.app/api/v1`
+- **Base URL**: `https://swoptrader-api.onrender.com/api/v1`
 - **Protocol**: HTTPS
 - **Authentication**: JWT-based authentication
 - **Database**: MongoDB Atlas (Cloud-hosted)
-- **Deployment**: Railway Cloud Platform
+- **Deployment**: Render Cloud Platform
 
 ## 🏗️ Architecture
 
@@ -19,7 +19,8 @@ The SwopTrader REST API is a comprehensive backend service built with Node.js, E
 - **Framework**: Express.js
 - **Database**: MongoDB Atlas with Mongoose ODM
 - **Security**: Helmet, CORS, Rate Limiting
-- **Deployment**: Railway with auto-scaling
+- **Push Notifications**: Firebase Cloud Messaging (FCM) integration
+- **Deployment**: Render with auto-scaling
 
 ### Database Schema
 The API uses MongoDB with the following collections:
@@ -252,6 +253,64 @@ Content-Type: application/json
 }
 ```
 
+### Push Notifications
+
+#### Register Device Token
+```
+POST /notifications/token
+Content-Type: application/json
+
+{
+  "userId": "user_123",
+  "token": "fcm_device_token_here",
+  "deviceId": "android_device_id_optional"
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "data": {
+    "tokens": ["fcm_token_1", "fcm_token_2"],
+    "registeredAt": "2025-11-18T20:00:00.000Z"
+  },
+  "message": "Device token registered"
+}
+```
+
+**Purpose**: Registers a Firebase Cloud Messaging (FCM) token for a user device to enable push notifications.
+
+#### Send Offer Notification
+```
+POST /notifications/offers
+Content-Type: application/json
+
+{
+  "offerId": "offer_123",
+  "recipientUserId": "user_456",
+  "senderUserId": "user_123",
+  "senderName": "John Doe",
+  "itemName": "Vintage Camera",
+  "message": "I'd like to trade my laptop for your camera"
+}
+```
+
+**Response:**
+```json
+{
+  "success": true,
+  "data": {
+    "successCount": 1,
+    "failureCount": 0,
+    "invalidTokens": []
+  },
+  "message": "Notification dispatched"
+}
+```
+
+**Purpose**: Sends a push notification to the recipient when they receive a new trade offer. The notification is delivered even when the app is closed or the device is offline (will be delivered when connectivity is restored).
+
 ## 🔒 Security Features
 
 ### Authentication
@@ -331,9 +390,10 @@ Content-Type: application/json
 - CDN support for static assets
 
 ### Auto-scaling
-- Railway platform auto-scaling based on demand
+- Render platform auto-scaling based on demand
 - Load balancing for high availability
 - Health checks and monitoring
+- Automatic SSL/TLS certificates
 
 ## 🔧 Development & Deployment
 
@@ -343,7 +403,15 @@ MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/swoptrader
 PORT=3000
 NODE_ENV=production
 ALLOWED_ORIGINS=https://yourdomain.com,https://app.yourdomain.com
+FIREBASE_SERVICE_ACCOUNT=<base64-encoded-json>
+# OR
+FIREBASE_SERVICE_ACCOUNT_JSON={"type":"service_account","project_id":"..."}
 ```
+
+**Firebase Configuration**: 
+- For push notifications, you need to provide a Firebase service account JSON
+- Can be provided as Base64-encoded string (`FIREBASE_SERVICE_ACCOUNT`) or raw JSON (`FIREBASE_SERVICE_ACCOUNT_JSON`)
+- The service account must have Firebase Cloud Messaging permissions
 
 ### Local Development
 ```bash
@@ -352,10 +420,11 @@ npm run dev
 ```
 
 ### Production Deployment
-- Automated deployment via Railway
+- Automated deployment via Render
 - Environment variable management
-- SSL certificate handling
+- SSL certificate handling (automatic HTTPS)
 - Domain configuration
+- Health check monitoring
 
 ## 📈 Monitoring & Analytics
 

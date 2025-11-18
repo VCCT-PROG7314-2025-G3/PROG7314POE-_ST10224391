@@ -18,7 +18,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
     
-    private const val BASE_URL = "https://swoptrader-api-production.up.railway.app/api/v1/"
+    private const val BASE_URL = "https://swoptrader-api.onrender.com/api/v1/"
     
     @Provides
     @Singleton

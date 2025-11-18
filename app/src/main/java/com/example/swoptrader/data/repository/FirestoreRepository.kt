@@ -743,12 +743,12 @@ class FirestoreRepository @Inject constructor(
         return try {
             Log.d(TAG, "Getting offers for user: $userId")
             val querySnapshot = firestore.collection(OFFERS_COLLECTION)
-                .whereIn("fromUserId", listOf(userId))
+                .whereEqualTo("fromUserId", userId)
                 .get()
                 .await()
             
             val querySnapshot2 = firestore.collection(OFFERS_COLLECTION)
-                .whereIn("toUserId", listOf(userId))
+                .whereEqualTo("toUserId", userId)
                 .get()
                 .await()
             

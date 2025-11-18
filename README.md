@@ -6,9 +6,11 @@ REST API:
 - https://github.com/apollo-xwb/swoptrader-api (ENV EXAMPLES FOUND HERE)
 - https://swoptrader-api.onrender.com/health
 
-PART 3 YOUTUBE LINK: https://youtu.be/ZKKV8uFmc-s
+YOUTUBE LINKS:
 
-PART 2 YOUTUBE LINK: https://youtu.be/6GNSfoYRHFs
+- PART 3: https://youtu.be/ZKKV8uFmc-s
+
+- PART 2: https://youtu.be/6GNSfoYRHFs
 
 GITHUB: https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391
 

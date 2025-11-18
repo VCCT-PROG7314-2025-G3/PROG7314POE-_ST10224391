@@ -12,6 +12,40 @@ YOUTUBE LINKS:
 
 - PART 2: https://youtu.be/6GNSfoYRHFs
 
+TIMESTAMPS (PART 3 VIDEO):
+
+0:00:00 - Introduction & Presenter
+0:00:37 - Switching to physical Samsung device + quick workspace view
+0:01:29 - GitHub repositories (personal + organisation)
+0:02:10 - App successfully running on emulator and physical device
+0:02:52 - Logging out and signing in with Google (Firebase Authentication)
+0:03:37 - Firebase user list + MongoDB fallback
+0:04:22 - Enabling biometric authentication (fingerprint) + in-app settings change
+0:05:08 - Language translation settings (Afrikaans example)
+0:05:44 - All 11 South African languages supported
+0:06:45 - REST API deployment on Render.com (health check + DB connection)
+0:07:33 - Offline functionality + real-time push notifications demo
+0:08:51 - Making an offer offline on emulator
+0:09:34 - Turning data back on → instant notification + auto-translation
+0:11:11 - Trade score, pickup/delivery options
+0:11:54 - Interactive map with auto-suggestions and current location
+0:13:26 - Scheduling meetup (calendar + confirmation)
+0:13:50 - Real-time in-app chat between devices
+0:15:04 - App icon and final assets
+0:15:57 - Category filtering (electronics, clothing, books, etc.)
+0:16:51 - Distance-based filtering + search functionality
+0:17:40 - Adding a new item (photo, desired trade, location toggle)
+0:18:54 - Live sync demo: new item appears instantly on emulator
+0:19:10 - Verified badge + user trust indicators
+0:19:43 - Comments section (FOMO feature)
+0:20:18 - Comment appears live on the other device
+0:20:45 - Marking a trade as complete
+0:21:28 - Gamification: trade scoring system explained (carbon footprint weights)
+0:22:10 - Deleting a post (real-time removal on both devices)
+0:22:45 - Community group button
+0:23:05 - Closing remarks, thank you, student details (Tonell Ramangalo, ST10224391, solo member)
+0:23:40 - End of video
+
 GITHUB: https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391
 
 SCREENSHOTS: https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391/blob/master/SCREENSHOTS.pdf

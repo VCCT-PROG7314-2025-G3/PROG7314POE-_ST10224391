@@ -43,7 +43,7 @@ TIMESTAMPS (PART 3 VIDEO):
 0:21:28 - Gamification: trade scoring system explained (carbon footprint weights)
 0:22:10 - Deleting a post (real-time removal on both devices)
 0:22:45 - Community group button
-0:23:05 - Closing remarks, thank you, student details (Tonell Ramangalo, ST10224391, solo member)
+0:23:05 - Closing remarks, thank you, student details (Tshwanelo Ramongalo, ST10224391, solo member)
 0:23:40 - End of video
 
 GITHUB: https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391

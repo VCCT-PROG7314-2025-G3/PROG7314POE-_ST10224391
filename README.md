@@ -2,11 +2,16 @@
 
 SOLO GROUP: ST10224391
 
-REST API: 
+## REST API: 
 - https://github.com/apollo-xwb/swoptrader-api (ENV EXAMPLES FOUND HERE)
 - https://swoptrader-api.onrender.com/health
 
-YOUTUBE LINKS:
+<img width="1581" height="823" alt="image" src="https://github.com/user-attachments/assets/c14d306c-ba99-483b-acf4-29376acfa49f" />
+
+## SCREENSHOTS
+- https://github.com/VCCT-PROG7314-2025-G3/PROG7314POE-_ST10224391/blob/master/SCREENSHOTS.pdf
+
+## YOUTUBE LINKS:
 
 - PART 3: https://youtu.be/ZKKV8uFmc-s
 
